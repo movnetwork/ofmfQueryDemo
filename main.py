@@ -26,12 +26,21 @@ def list_cycles(chain_name="", direction="", before_timestamp="", after_timestam
     res = requests.post(url, encoded_data, auth=('summary', 'ofmf'))
     print(res.json())
 
+def create_cross_address(chain_name, vapor_address):
+    url = "https://ofmf.movapi.com/api/v1/create-cross-address"
+    params = {
+        "chain_name": chain_name,
+        "vapor_address": vapor_address
+    }
+    encoded_data = json.dumps(params).encode('utf-8')
+    res = requests.post(url, encoded_data, auth=('summary', 'ofmf'))
+    print(res.json())
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    hash = "c3b67438170a00114f32467e6097d3230bdb713b6c2fa277ad9ddde3208a07dd"
-    list_cycle(hash)
+    list_cycle("c3b67438170a00114f32467e6097d3230bdb713b6c2fa277ad9ddde3208a07dd")
 
-    list_cycles(chain_name="ETH", direction="in")
+    # list_cycles(chain_name="ETH", direction="in")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    # create_cross_address("LTC", "vp1qphgfqj9wyvcnqnfts3gdtp9ecms3shdkq7zcws")
+
