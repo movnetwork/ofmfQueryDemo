@@ -38,7 +38,7 @@ def create_cross_address(chain_name, vapor_address):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    list_cycle("c3b67438170a00114f32467e6097d3230bdb713b6c2fa277ad9ddde3208a07dd")
+    list_cycle("2cbf2aa6f9b8a6f3643d3ddab41f61cdd9ca6d0a9d2c2a06398061fcc0ca8437")
 
     # list_cycles(chain_name="ETH", direction="in")
 
